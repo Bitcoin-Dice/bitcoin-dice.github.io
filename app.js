@@ -21,7 +21,7 @@ var config = {
   force_https_redirect: !isRunningLocally(),
   // - Configure the house edge (default is 1%)
   //   Must be between 0.0 (0%) and 1.0 (100%)
-  house_edge: 0.01,
+  house_edge: 0.015,
   chat_buffer_size: 250,
   // - The amount of bets to show on screen in each tab
   bet_buffer_size: 25
@@ -144,7 +144,7 @@ helpers.getPrecision = function(num) {
   return Math.max(
     0,
     // Number of digits right of decimal point.
-    (match[1] ? match[1].length : 0) -
+    (match[1] ? match[1].length : 2) -
     // Adjust for scientific notation.
     (match[2] ? +match[2] : 0));
 };
