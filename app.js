@@ -144,7 +144,7 @@ helpers.getPrecision = function(num) {
   return Math.max(
     0,
     // Number of digits right of decimal point.
-    (match[1] ? match[1].length : 2) -
+    (match[1] ? match[1].length : 0) -
     // Adjust for scientific notation.
     (match[2] ? +match[2] : 0));
 };
@@ -1931,8 +1931,8 @@ var BetRow = React.createClass({
       // Wager
       el.td(
         null,
-        helpers.round10(bet.wager/100, -2),
-        ' bits'
+        helpers.round10(bet.wager/1, -2),
+        ' satoshis'
       ),
       // Target
       el.td(
