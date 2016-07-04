@@ -21,7 +21,7 @@ var config = {
   force_https_redirect: !isRunningLocally(),
   // - Configure the house edge (default is 1%)
   //   Must be between 0.0 (0%) and 1.0 (100%)
-  house_edge: 0.015,
+  house_edge: 0.01,
   chat_buffer_size: 250,
   // - The amount of bets to show on screen in each tab
   bet_buffer_size: 25
@@ -733,7 +733,7 @@ var UserBox = React.createClass({
              ' + ' + (worldStore.state.user.unconfirmed_balance / 100) + ' bits pending'
            )
         ),
-        // Refresh button
+        // Refresh button   
         el.button(
           {
             className: 'btn btn-link navbar-btn navbar-left ' + (worldStore.state.isRefreshingUser ? ' rotate' : ''),
