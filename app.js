@@ -809,10 +809,6 @@ var Navbar = React.createClass({
                 target: '_blank'
               },
               'View on Moneypot ',
-              // External site glyphicon
-              el.span(
-                {className: 'glyphicon glyphicon-new-window'}
-              )
             )
           )
         ),
