@@ -1341,18 +1341,6 @@ var BetBoxWager = React.createClass({
             'Max'
           )
         )
-                el.div(
-          {className: 'btn-group'},
-          el.button(
-            {
-              className: 'btn btn-default btn-md',
-              type: 'button',
-              style: style3,
-              <a onClick={onClick} href={link}>{link}   </a>
-            },
-            'Auto Bet'
-          )
-        )
       )
     );
   }
