@@ -809,14 +809,13 @@ var Navbar = React.createClass({
                 target: '_blank'
               },
               'View on Moneypot ',
- -              // External site glyphicon
- -              el.span(
- -                {className: 'glyphicon glyphicon-new-window'}
- -              )
+              // External site glyphicon
+              el.span(
+                {className: 'glyphicon glyphicon-new-window'}
+              )
             )
           )
         ),
-
         // Userbox
         React.createElement(UserBox, null)
       )
@@ -1340,6 +1339,18 @@ var BetBoxWager = React.createClass({
               onClick: this._onMaxWager
             },
             'Max'
+          )
+        )
+                el.div(
+          {className: 'btn-group'},
+          el.button(
+            {
+              className: 'btn btn-default btn-md',
+              type: 'button',
+              style: style3,
+              <a onClick={onClick} href={link}>{link}   </a>
+            },
+            'Auto Bet'
           )
         )
       )
